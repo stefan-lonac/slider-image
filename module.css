@@ -25,6 +25,7 @@ img {
 .image-slider {
     position: relative;
     width: 80%;
+    margin: 50px auto;
 }
 
 .image-slider .slider-container .slide-item {
