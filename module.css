@@ -105,6 +105,13 @@ img {
   
 
 
+@media (max-width: 769px) {
+    .image-slider .slider-container .slide-item .content {
+        width: 60%;
+    }
+}
+
+
 @media (max-width: 426px) {
     .image-slider .slider-container .slide-item .content {
         position: inherit;
