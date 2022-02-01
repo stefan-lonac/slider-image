@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+    overflow-x: hidden;
+    font-family: 'Montserrat', sans-serif; 
+}
+  
+header { padding: 0; }
+  
+a { text-decoration: none; }
+  
+ul {
+    padding: 0;
+    list-style: none; 
+}
+  
+*:focus {
+    outline: none !important; 
+}
+  
+img {
+    max-width: 100%;
+    width: 100%; 
+}
+
+.image-slider {
+    position: relative;
+    width: 80%;
+    margin: 50px auto;
+}
+
+.image-slider .slider-container .slide-item {
+    display: none;
+    position: relative;
+}
+
+.image-slider .slider-container .slide-item:first-child {
+    display: block;
+}
+
+.image-slider .slider-container .slide-item img {
+    vertical-align: middle; 
+}
+  
+.image-slider .slider-container .slide-item .content {
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    width: 30%;
+    padding: 35px;
+    background-color: #fff;
+}
+
+.image-slider .slider-nav {
+    z-index: 999;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    margin: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+}
+
+.image-slider  .slider-nav a {
+    background-color: #fff;
+    border-radius: 100%;
+    padding: 5px 10px;
+    cursor: pointer;
+    box-shadow: 0px 2px 5px #888888;
+    margin: 0 5px;
+}
+
+.image-slider .dot-slider {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: transparent;
+    border-color: #ddd;
+    border-width: 5 px;
+    border-style: solid;
+    border-radius: 50%;
+    display: inline-block;
+    -webkit-transition: border-color 0.6s ease;
+    -moz-transition: border-color 0.6s ease;
+    -o-transition: border-color 0.6s ease;
+    transition: border-color 0.6s ease; 
+}
+ 
+
+.image-slider .active {
+    border-color: #666; 
+}  
+
+.image-slider .fade {
+    -webkit-animation-name: fade-image;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade-image;
+    animation-duration: 1.5s; 
+}
+  
+@-webkit-keyframes fade-image {
+    from { opacity: .4; }
+    to { opacity: 1; } 
+}
+  
+  @keyframes fade-image {
+    from { opacity: .4; }
+    to { opacity: 1; } 
+}
+  
+@media (max-width: 769px) {
+    
+    .image-slider {
+        position: relative;
+        width: 100%;
+    }
+
+    .image-slider .slider-container .slide-item .content {
+        width: 60%;
+    }
+}
+
+@media (max-width: 426px) {
+    .image-slider .slider-container .slide-item .content {
+        position: inherit;
+        width: 70%;
+        left: 0;
+        right: 0;
+        margin: -90px auto 10px auto;
+        box-shadow: -3px 3px 8px #444444;
+    }
+
+    .image-slider .slider-container .slide-item .content h1 {
+        font-size: 18px;
+    }
+
+    .image-slider .slider-nav {
+        position: initial;
+    }
+
+}
